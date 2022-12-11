@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="800" height="800">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <!-- <img src="./port.jpeg" width="400" /> -->
+    <p id="numdot">xxx</p>
+    <p>
+      Instructions: Shift Left Click to change the lion's color. Clicking
+      multiple times will result in different colors.
+    </p>
+    <p>
+      For the Camera action with mouse click, it is kind of buggy. Move the
+      Camera Angle Slider to increase the magnitude of camera movement
+    </p>
+    <p>Animation ON/OFF</p>
+    <button type="button" id="animationWingOnButton">ON</button>
+    <button type="button" id="animationWingOffButton">OFF</button>
+    <p>
+      Camera Angle
+      <input
+        type="range"
+        min="1"
+        max="359"
+        value="1"
+        class="slider"
+        id="angleSlide"
+      />
+      Camera Angle Y
+      <input
+        type="range"
+        min="1"
+        max="359"
+        value="1"
+        class="slider"
+        id="angleYSlide"
+      />
+    </p>
+
+    <p>
+      Tail
+      <input
+        type="range"
+        min="-45"
+        max="45"
+        value="0"
+        class="slider"
+        id="tailSlide"
+      />
+      Wing
+      <input
+        type="range"
+        min="-100"
+        max="100"
+        value="0"
+        class="slider"
+        id="wingSlide"
+      />
+    </p>
+
+    <p>
+      Left Front Leg
+      <input
+        type="range"
+        min="-35"
+        max="35"
+        value="0"
+        class="slider"
+        id="leftFrontSlide"
+      />
+      Right Front Leg
+      <input
+        type="range"
+        min="-35"
+        max="35"
+        value="0"
+        class="slider"
+        id="rightFrontSlide"
+      />
+    </p>
+
+    <p>
+      Left Leg 1
+      <input
+        type="range"
+        min="-35"
+        max="35"
+        value="0"
+        class="slider"
+        id="leftForeSlide"
+      />
+      Left Leg 2
+      <input
+        type="range"
+        min="-45"
+        max="45"
+        value="0"
+        class="slider"
+        id="leftSlide"
+      />
+    </p>
+    <p>
+      Right Leg 1
+      <input
+        type="range"
+        min="-35"
+        max="35"
+        value="0"
+        class="slider"
+        id="rightSlide"
+      />
+      Right Leg 2
+      <input
+        type="range"
+        min="-45"
+        max="45"
+        value="0"
+        class="slider"
+        id="right2Slide"
+      />
+    </p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Points.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Prism.js"></script>
+    <script src="BlockyAnimal.js"></script>
+  </body>
+</html>
